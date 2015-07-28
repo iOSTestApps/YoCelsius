@@ -220,6 +220,9 @@
 		10E1F5381A908C3200AED5D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E1F5371A908C3200AED5D6 /* ViewController.m */; };
 		10E1F53D1A908C3200AED5D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10E1F53C1A908C3200AED5D6 /* Images.xcassets */; };
 		10E1F54C1A908C3200AED5D6 /* YXMWeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E1F54B1A908C3200AED5D6 /* YXMWeatherTests.m */; };
+		1EC44B2F8DE0FF79A4865FE1 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3FDD3D9476C9ADF08F05DDF /* BuddyBuildSDK.framework */; };
+		4298D2056A8E8BB0C57ADA87 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5AA810D97D15255DDF987A /* AssetsLibrary.framework */; };
+		AB6B48EFBF2857BE74BF0F7E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072107B86F87CDFE17008312 /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -233,6 +236,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		072107B86F87CDFE17008312 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		0F5AA810D97D15255DDF987A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		104405D71AA14AF4008DF810 /* SnowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowView.h; sourceTree = "<group>"; };
 		104405D81AA14AF4008DF810 /* SnowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnowView.m; sourceTree = "<group>"; };
 		104405D91AA14AF4008DF810 /* CALayer+MaskLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+MaskLayer.h"; sourceTree = "<group>"; };
@@ -670,6 +675,7 @@
 		10E1F5451A908C3200AED5D6 /* YXMWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YXMWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E1F54A1A908C3200AED5D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10E1F54B1A908C3200AED5D6 /* YXMWeatherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YXMWeatherTests.m; sourceTree = "<group>"; };
+		A3FDD3D9476C9ADF08F05DDF /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -677,6 +683,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EC44B2F8DE0FF79A4865FE1 /* BuddyBuildSDK.framework in Frameworks */,
+				4298D2056A8E8BB0C57ADA87 /* AssetsLibrary.framework in Frameworks */,
+				AB6B48EFBF2857BE74BF0F7E /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1369,6 +1378,7 @@
 				10E1F52E1A908C3200AED5D6 /* YXMWeather */,
 				10E1F5481A908C3200AED5D6 /* YXMWeatherTests */,
 				10E1F52D1A908C3200AED5D6 /* Products */,
+				8149A89A7F6492A235201E6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1445,6 +1455,16 @@
 				10E1F54A1A908C3200AED5D6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8149A89A7F6492A235201E6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3FDD3D9476C9ADF08F05DDF /* BuddyBuildSDK.framework */,
+				0F5AA810D97D15255DDF987A /* AssetsLibrary.framework */,
+				072107B86F87CDFE17008312 /* CoreText.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1866,6 +1886,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/AFNetworking.pch";
 				INFOPLIST_FILE = YXMWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1885,6 +1909,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/AFNetworking.pch";
 				INFOPLIST_FILE = YXMWeather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
